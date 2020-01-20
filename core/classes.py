@@ -23,16 +23,7 @@ class Garage:
         self.cars = cars;
 
     def __iter__(self):
-        self.iterIndex = 0;
-        return self;
-
-    def __next__(self):
-        if self.iterIndex < len(self.cars):
-            val = self.cars[self.iterIndex];
-            self.iterIndex = self.iterIndex + 1;
-            return val;
-
-        raise StopIteration;
+        return iter(self.cars);
 
     def add(self, car):
         self.cars.append(car);
@@ -50,3 +41,5 @@ if __name__ == "__main__":
     garage.delete(1);
     for car in garage :
         print(car);
+        for car2 in garage :
+            print("   {}".format(car2));

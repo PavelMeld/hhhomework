@@ -20,7 +20,7 @@ def get_first_n_last(some_list):
 # Написать функцию, которая принимает список и возвращает новый список, состоящий из элементов принятого, но без повторений
 list_with_repetition = [1, 1, 3, 4, 2, 2, 2, 6]
 def get_list_without_repetition(some_list):
-  return set(some_list);
+  return list(set(some_list));
 
 # Написать функцию, которая возвращает словарь, ключи которого из списка keys, а значения из списка values
 keys = ['red', 'green', 'blue']
